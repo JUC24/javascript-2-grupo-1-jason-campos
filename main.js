@@ -7,6 +7,7 @@ function invert(val){
 
 console.log(invert(123));
 
+// Escriba una function que acepte un string como parámetro y convierta cada primer letra de cada palabra en mayúscula
 
 function mayuscula(palabra){
   let wordMayus = palabra[0].toUpperCase() + palabra.substring(1)

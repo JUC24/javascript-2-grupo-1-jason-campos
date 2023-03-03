@@ -27,7 +27,7 @@
 // Depende de lo que se necesite hacer
 
 /*Constructores*/
-function estudianteNew(nombre,apellidos,fechaNacimiento,id,nuevoIngreso,carrera,cursosMatriculados,CursosCursados){
+function estudianteNew(nombre,apellidos,fechaNacimiento,id,nuevoIngreso,carrera,cursosMatriculados,cursosCursados){
   this.nombre = nombre;
   this.apellidos = apellidos;
   this.fechaNacimiento = fechaNacimiento;
@@ -35,7 +35,7 @@ function estudianteNew(nombre,apellidos,fechaNacimiento,id,nuevoIngreso,carrera,
   this.nuevoIngreso = nuevoIngreso;
   this.carrera = carrera;
   this.cursosMatriculados = cursosMatriculados || [];
-  this.CursosCursados = CursosCursados || [];
+  this.cursosCursados = cursosCursados || [];
   
   this.matricular = function(curso){
     this.cursosMatriculados.push(curso)
@@ -58,4 +58,4 @@ const estudiantePrueba = new estudianteNew ('Andy','smith','1990-10-30','a-0001'
 
 console.log(estudiantePrueba)
 estudiantePrueba.aprovecourse('Prueba 1', 50);
-console.log(estudiantePrueba.CursosCursados);
+console.log(estudiantePrueba.cursosCursados);

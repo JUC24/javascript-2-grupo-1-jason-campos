@@ -22,7 +22,7 @@ Crear un programa que simule una librería. Debe tener las siguientes caracterí
 */
 
 class Libreria{
-  construcLibreria(nombre,direccion,libros,comics){
+  constructorLibreria(nombre,direccion,libros,comics){
     this.nombre = nombre;
     this.direccion = direccion;
     this.libros = libros || [];
@@ -39,7 +39,7 @@ class Libreria{
 }
 
 class Libro{
-  construcLibro( titulo, autor, precio, cantidad, year){
+  constructorLibro( titulo, autor, precio, cantidad, year){
     this.titulo = titulo;
     this.autor = autor;
     this.precio = precio;
@@ -67,7 +67,7 @@ class Libro{
     return this.precio;
   }
 
-  get ano() {
+  get year() {
     return this.year;
   }
 
@@ -112,7 +112,7 @@ class Comic extends Libro {
   getInfo() {
     let information = super.getInfo();
     information += ` Dibujante: ${this.dibujante}. Editorial: ${this.editorial}. Volumen: ${this.volumen}.`;
-    return info;
+    return information;
   }
 }
 
@@ -124,6 +124,8 @@ libreria.agregarLibro(libro1);
 const comic1 = new Comic("Watchmen", "Alan Moore", 250, 0, 1986, "Dave Gibbons", "DC Comics", 1);
 libreria.agregarComic(comic1);
 
-console.log(libreria.libros.getInfo());
-console.log(libreria.comics.getInfo());
-console.log(libreria.comics)
+console.log(libreria.libros[0].getInfo());
+console.log(libreria.comics[0].getInfo());
+console.log(libreria.comics[0])
+
+//Revisar problema con profe
